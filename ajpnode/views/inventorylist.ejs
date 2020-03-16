@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inventory List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Inventory List</h1>
+    <ul>
+      <%
+        var list = '';
+        for (i = 0; i < inventorylist.length; i++) {
+          list += '<li><a href="catalog item:' + inventorylist[i].type + '">' + inventorylist[i].title + '</a></li>';
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
